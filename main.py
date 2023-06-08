@@ -274,6 +274,7 @@ for productElem in productList:
     time.sleep(0.5)
     print("기본주소정보입력")
 
+
     btnSearch=browser.find_element(By.CSS_SELECTOR,'body > section > div.zipcode__wrapper > div > div > header > div > form > div.zipcode__search-trigger > button')
     browser.execute_script("arguments[0].click();", btnSearch)  #
     browser.implicitly_wait(3)
