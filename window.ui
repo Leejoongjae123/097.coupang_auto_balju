@@ -6,22 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>378</width>
-    <height>373</height>
+    <width>407</width>
+    <height>517</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
        <string>인증</string>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
+       <item row="0" column="0" colspan="2">
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
           <widget class="QLabel" name="label">
@@ -35,7 +35,7 @@
          </item>
         </layout>
        </item>
-       <item row="0" column="1" rowspan="2">
+       <item row="0" column="2" rowspan="2">
         <widget class="QPushButton" name="pushButton">
          <property name="text">
           <string>로그인</string>
@@ -43,18 +43,14 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>PW</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="lineEdit_2"/>
-         </item>
-        </layout>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>PW</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_2"/>
        </item>
       </layout>
      </widget>
@@ -64,8 +60,8 @@
       <property name="title">
        <string>쿠팡정보</string>
       </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
           <widget class="QLabel" name="label_3">
@@ -79,7 +75,7 @@
          </item>
         </layout>
        </item>
-       <item row="1" column="0">
+       <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
           <widget class="QLabel" name="label_4">
@@ -95,6 +91,27 @@
        </item>
       </layout>
      </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>파일경로</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_7"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="text">
+         <string>파일찾기</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -166,8 +183,8 @@
    <slot>auth()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>326</x>
-     <y>76</y>
+     <x>338</x>
+     <y>55</y>
     </hint>
     <hint type="destinationlabel">
      <x>422</x>
@@ -182,8 +199,8 @@
    <slot>start()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>73</x>
-     <y>407</y>
+     <x>63</x>
+     <y>327</y>
     </hint>
     <hint type="destinationlabel">
      <x>97</x>
@@ -198,12 +215,28 @@
    <slot>quit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>146</x>
-     <y>412</y>
+     <x>136</x>
+     <y>332</y>
     </hint>
     <hint type="destinationlabel">
      <x>231</x>
      <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>find()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>246</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>344</x>
+     <y>287</y>
     </hint>
    </hints>
   </connection>
@@ -212,5 +245,6 @@
   <slot>auth()</slot>
   <slot>start()</slot>
   <slot>quit()</slot>
+  <slot>find()</slot>
  </slots>
 </ui>
